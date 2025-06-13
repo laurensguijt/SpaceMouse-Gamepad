@@ -3,7 +3,7 @@
 A Python application that converts a 3D Connexion SpaceMouse into a game controller, allowing you to control character movement using your left hand while keeping your right hand free for mouse-based actions.
 
 
-<img src="assets/icons/Spacemouse_keyboard.png" alt="SpaceMouse-Gamepad logo" width="150"/>
+<img src="assets/icons/Spacemouse_keyboard.png" alt="SpaceMouse-Gamepad logo" width="200"/>
 
 ## Features
 

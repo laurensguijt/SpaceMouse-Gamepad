@@ -1,0 +1,23 @@
+{
+  "movement_keys": {
+    "forward": "w",
+    "backward": "s",
+    "left": "a",
+    "right": "d"
+  },
+  "jump_key": "space",
+  "crouch_key": "c",
+  "sprint_key": "shift",
+  "prone_key": "x",
+  "movement_threshold": 0.5,
+  "jump_threshold": 0.5,
+  "crouch_threshold": 0.5,
+  "sprint_threshold": 0.9,
+  "sprint_enabled": true,
+  "prone_duration": 0.8,
+  "button_keys": [
+    "1",
+    "2"
+  ],
+  "profile_process_map": {}
+}

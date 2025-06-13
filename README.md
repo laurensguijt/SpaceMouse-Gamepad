@@ -1,8 +1,5 @@
 # SpaceMouse-Gamepad
 
-Designed by: Laurens Guijt  
-GitHub: https://github.com/laurensguijt/SpaceMouse-Gamepad
-
 A Python application that converts a 3D Connexion SpaceMouse into a game controller, allowing you to control character movement using your left hand while keeping your right hand free for mouse-based actions.
 
 ## Features

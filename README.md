@@ -22,6 +22,9 @@ A Python application that converts a 3D Connexion SpaceMouse into a game control
 - Python 3.8 or higher
 - 3D Connexion SpaceMouse device
 - USB port for SpaceMouse connection
+- **hidapi.dll** (required for SpaceMouse communication)
+    - Download the correct version for your system from the official HIDAPI releases: [https://github.com/libusb/hidapi/releases](https://github.com/libusb/hidapi/releases)
+    - Place `hidapi.dll` in the same folder as the executable (`.exe`) if you are using the standalone version, or in your working directory if running from source.
 
 ## Installation
 

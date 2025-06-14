@@ -16,6 +16,7 @@ import logging
 import os
 import json
 import psutil
+import sys
 
 logger = logging.getLogger(__name__)
 
@@ -51,7 +52,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("SpaceMouse-Gamepad")
         self.setMinimumSize(400, 500)
         # Zet het venstericoon
-        self.setWindowIcon(QIcon('assets/icons/spacemouse_controller_icon.ico'))
+        icon_path = self.resource_path('assets/icons/spacemouse_controller_icon.ico')
+        self.setWindowIcon(QIcon(icon_path))
         
         # Create central widget and layout
         central_widget = QWidget()
@@ -60,7 +62,7 @@ class MainWindow(QMainWindow):
         
         # Voeg het logo toe bovenaan
         logo_label = QLabel()
-        logo_pixmap = QPixmap('assets/icons/Spacemouse_keyboard.png')
+        logo_pixmap = QPixmap(self.resource_path('assets/icons/Spacemouse_keyboard.png'))
         logo_label.setPixmap(logo_pixmap.scaledToWidth(175, Qt.TransformationMode.SmoothTransformation))
         logo_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         layout.addWidget(logo_label)
@@ -703,3 +705,9 @@ class MainWindow(QMainWindow):
                 "SpaceMouse Disconnected",
                 "The SpaceMouse has been disconnected or cannot reconnect. Please check the connection and try again."
             ) 
+
+    def resource_path(self, relative_path):
+        """Get absolute path to resource, works for dev and for PyInstaller onefile."""
+        if hasattr(sys, '_MEIPASS'):
+            return os.path.join(sys._MEIPASS, relative_path)
+        return os.path.join(os.path.abspath("."), relative_path) 

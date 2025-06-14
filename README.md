@@ -1,9 +1,22 @@
 # SpaceMouse-Gamepad
 
-Designed by: Laurens Guijt  
-GitHub: https://github.com/laurensguijt/SpaceMouse-Gamepad
-
 A Python application that converts a 3D Connexion SpaceMouse into a game controller, allowing you to control character movement using your left hand while keeping your right hand free for mouse-based actions.
+
+<img src="assets/icons/Spacemouse_keyboard.png" alt="SpaceMouse-Gamepad logo" width="200"/>
+
+---
+
+## 🚀 Quick Start (Portable .exe)
+
+**No installation or Python required!**  
+Just download the latest portable `.exe` from the [Releases page](https://github.com/laurensguijt/SpaceMouse-Gamepad/releases/latest) and double-click to start.
+
+- Download: [SpaceMouse-Gamepad-Portable.exe](https://github.com/laurensguijt/SpaceMouse-Gamepad/releases/latest)
+- Connect your SpaceMouse via USB
+- Configure your keybinds and settings in the GUI
+- Start your game and enjoy!
+
+---
 
 ## Features
 
@@ -19,14 +32,13 @@ A Python application that converts a 3D Connexion SpaceMouse into a game control
 ## Requirements
 
 - Windows 10 or later
-- Python 3.8 or higher
 - 3D Connexion SpaceMouse device
 - USB port for SpaceMouse connection
 - **hidapi.dll** (required for SpaceMouse communication)
     - Download the correct version for your system from the official HIDAPI releases: [https://github.com/libusb/hidapi/releases](https://github.com/libusb/hidapi/releases)
     - Place `hidapi.dll` in the same folder as the executable (`.exe`) if you are using the standalone version, or in your working directory if running from source.
 
-## Installation
+## Installation (for Python users)
 
 1. Clone the repository:
 ```bash
@@ -39,7 +51,7 @@ cd SpaceMouse-Gamepad
 pip install -r requirements.txt
 ```
 
-## Usage
+## Usage (for Python users)
 
 1. Connect your SpaceMouse device to your computer
 2. Run the application:
@@ -63,10 +75,10 @@ python src/main.py
 
 ## Building from Source
 
-To create an executable:
+To create an executable (including assets and profiles):
 
 ```bash
-pyinstaller --onefile --windowed src/main.py
+pyinstaller --onefile --windowed --icon=assets/icons/spacemouse_controller_icon.ico --add-data "assets/icons/*;assets/icons" --add-data "profiles/*;profiles" src/main.py
 ```
 
 The executable will be created in the `dist` directory.
